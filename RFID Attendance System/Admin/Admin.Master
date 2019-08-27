@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="RFID_Attendance_System.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <link href="../Assets/styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Assets/fontawesome/css/all.css" rel="stylesheet" />
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">Attendance System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Add Users.aspx">Add Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Add Courses.aspx">Add Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Users.aspx">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Courses.aspx">Courses</a>
+                    </li>
+                </ul>
+                <asp:Panel runat="server" DefaultButton="logout">
+                    <asp:Button runat="server" ID="logout" Text="Logout" OnClick="logout_Click" class="btn btn-outline-primary my-2 my-sm-0" />
+                </asp:Panel>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="Content" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <script src="../Assets/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="../Assets/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>
